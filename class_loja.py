@@ -14,7 +14,10 @@ class Pc:
         time.sleep(10)
         self.navegador.find_element(By.ID, "submitFormContinuar").click()
     def funcao_principal(self):
-        self.pro
+        envia_banco = []
+        envia_banco.append(self.processador())
+        self.placa_mae()
+
 
     def processador(self):
         self.navegador.get('https://www.terabyteshop.com.br/hardware/processadores/intel')
@@ -32,4 +35,8 @@ class Pc:
             processador.append(arr)
         return processador
 
-        print(processador)
+    def placa_mae(self):
+        self.navegador.get('https://www.terabyteshop.com.br/hardware/placas-mae/lga-1700-intel')
+        
+
+        
